@@ -10,13 +10,15 @@ const app = new Vue({
             { nameCar: 'Chevelle', quantity: 10 },
             { nameCar: 'Corla 86', quantity: 10 }
         ],
-        newCar: ''
+        newCar: '',
     },
     methods: {
         addingCars() {
             console.log("you've cliked addingCars Method !!");
             // With 'this' we can access to many properties on the same instance
             this.cars.push({ nameCar: this.newCar, quantity: 0 });
+            this.newCar = '';
+            this.newquantity = '';
         }
     },
 });
