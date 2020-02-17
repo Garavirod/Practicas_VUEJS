@@ -12,6 +12,10 @@
     <div id="app">
         <h1>{{titulo}}</h1>
         <h1>{{fruts}}</h1>
+        <!-- Model allows you do a direct conection from html file to javascript fiele -->
+        <input type="text" name="" id="" v-model='newCar'>
+        <!-- VUE's events -->
+        <button v-on:click='addingCars'>Add</button>
         <ul>
             <li v-for="fruit of fruts">{{fruit}}</li>
         </ul>
