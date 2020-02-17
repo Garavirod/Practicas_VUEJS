@@ -6,12 +6,9 @@ const app = new Vue({
         cars: [
             { nameCar: 'Mazda', quantity: 10 },
             { nameCar: 'Kia', quantity: 10 },
-            { nameCar: 'Mustang', quantity: 10 },
+            { nameCar: 'Mustang', quantity: 0 },
             { nameCar: 'Chevelle', quantity: 10 },
             { nameCar: 'Corla 86', quantity: 10 }
         ]
-
     }
-
-
 });

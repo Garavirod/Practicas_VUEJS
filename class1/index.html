@@ -19,7 +19,11 @@
         <hr>
 
         <ul>
-            <li v-for='car of cars'>{{car.nameCar}} {{car.quantity}}</li>
+            <!-- Donde cars el un elemento la 'data' -->
+            <li v-for='car of cars'>
+                {{car.nameCar}} {{car.quantity}} -
+                <span v-if='car.quantity === 0'>There isn't left</span>
+            </li>
         </ul>
     </div>
     <!-- development version, includes helpful console warnings -->
