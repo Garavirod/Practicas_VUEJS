@@ -24,10 +24,13 @@
         <ul>
             <!-- Donde cars el un elemento la 'data' -->
             <li v-for='car of cars'>
-                <input type="number" v-model.nomber='car.quantity'> {{car.nameCar}}
+                <input type="number" v-model.number='car.quantity'> {{car.nameCar}}
+                <button @click="car.quantity++">+</button>
+                <button @click="car.quantity--" v-if="car.quantity != 0">-</button>
                 <span v-if='car.quantity === 0'>There isn't left</span>
             </li>
         </ul>
+        <h4>Total : {{additionCars}}</h4>
     </div>
     <!-- development version, includes helpful console warnings -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

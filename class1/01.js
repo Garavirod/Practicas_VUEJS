@@ -11,6 +11,7 @@ const app = new Vue({
             { nameCar: 'Corla 86', quantity: 10 }
         ],
         newCar: '',
+        total: 0
     },
     methods: {
         addingCars() {
@@ -19,6 +20,20 @@ const app = new Vue({
             this.cars.push({ nameCar: this.newCar, quantity: 0 });
             this.newCar = '';
             this.newquantity = '';
+        }
+    },
+    computed: {
+        additionCars() {
+            /** 
+             * This function is going to be executed each time 'quantity'
+             * gets canhge.
+             * Each time you modify app's property this function is going to be executed
+             */
+            this.total = 0;
+            for (car of this.cars)
+                this.total += car.quantity;
+
+            return this.total;
         }
     },
 });
