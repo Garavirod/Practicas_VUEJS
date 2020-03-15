@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <div class="container mt-5" id="app">
+        <h3>{{title}}</h3>
+        <input type="text" name="" id="" class="form-control my-3" v-model="newTask" v-on:keyup.enter="addTask">
+        <button class="btn btn-primary" @click="addTask">Add</button>
+
+        <div class="mt-3" v-for="(item,index) of task">
+            <div role="alert" :class="['alert', item.status ? 'alert-success' : 'alert-danger']">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        {{index}} - {{item.name}} - {{item.status}}
+                    </div>
+                    <div>
+                        <!-- We pass index like a parammeter -->
+                        <button class="btn btn-success ml-2 btn-sm" @click="editTask(index)">Ok</button>
+                        <button class="btn btn-danger ml-2 btn-sm" @click="deleteTask(index)">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
