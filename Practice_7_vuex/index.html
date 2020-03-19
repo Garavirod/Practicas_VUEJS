@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <div class="container mt-5" id="app">
+        <titulo></titulo>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vuex@3.1.3/dist/vuex.js"></script>
+    <script src="components/title.js"></script>
+    <script src="components/child.js"></script>
+    <script>
+        //With vuex we can share propiertie between components
+        const store = new Vuex.Store({
+            state: { //here is going data which will be shared with all components
+                sharedNumber: 10
+            },
+            mutations: { //mutaton is an object which contains the mehhods which modify the data of 'sate'
+                increase() {
+                    this.state.sharedNumber++
+                },
+                less(state) {
+                    state.sharedNumber--
+                }
+            }
+        });
+
+        new Vue({
+            el: '#app',
+            store: store //We use the store on we data app sotre.state.data_shared
+        });
+    </script>
+</body>
+
+</html>
