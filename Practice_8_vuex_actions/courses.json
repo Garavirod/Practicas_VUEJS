@@ -1,0 +1,11 @@
+[
+    { "name": "HTML", "id": 1 },
+    { "name": "NodeJS", "id": 2 },
+    { "name": "Angular", "id": 3 },
+    { "name": "Laravel", "id": 4 },
+    { "name": "Djnago", "id": 5 },
+    { "name": "VueJS", "id": 6 },
+    { "name": "Ruby on Rails", "id": 7 },
+    { "name": "ASP .NET", "id": 8 },
+    { "name": "Bootstrap 4", "id": 9 }
+]
