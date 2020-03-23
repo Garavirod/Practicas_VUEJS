@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Service from '../views/Services.vue'
 
+
 Vue.use(VueRouter)
 
 const routes = [{
@@ -28,7 +29,13 @@ const routes = [{
         path: '/pictures/:id',
         name: 'Pictures',
         component: () =>
-            import ('../views/Pictures.vue')
+            import ( /* webpackChunkName: "about" */ '../views/Pictures.vue')
+    },
+    {
+        path: '/grid',
+        name: 'Grid',
+        component: () =>
+            import ( /* webpackChunkName: "about" */ '../views/Grid.vue')
     }
 ]
 
