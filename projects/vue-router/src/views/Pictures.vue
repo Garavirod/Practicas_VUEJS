@@ -5,13 +5,14 @@
         <!-- :to takes the current path-->
        <router-link :to="{name:'Pictures', params: {id: photo}}" 
             v-for="(photo,index) of photoArray" :key="index">
-           <button class="btn btn-info">Photo {{photo}}</button>
+           <button class="btn btn-info m-2">Photo {{photo}}</button>
        </router-link>
         <!-- Foreign component -->
        <Picture/>
-       <button @click="goHome">Go Home</button>
-       <button @click="goPrevious">Previous</button>
-       <button @click="goNext">Next</button>
+       <button class="btn btn-warning m-2" @click="goHome">Go Home</button>
+       <button class="btn btn-warning m-2" @click="goPrevious">Previous</button>
+       <button class="btn btn-warning m-2" @click="goNext">Next</button>
+       
 
     </div>
 </template>
